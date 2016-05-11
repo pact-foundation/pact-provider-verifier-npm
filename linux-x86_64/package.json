@@ -1,0 +1,33 @@
+{
+	"name": "@pact-foundation/pact-provider-verifier-linux-x64",
+	"version": "0.8.4",
+	"description": "Pact provider verifier",
+	"os": [
+		"linux"
+	],
+	"cpu": [
+		"x64"
+	],
+	"bin": {
+		"pact-provider-verifier": "./bin/pact-provider-verifier"
+	},
+	"main": "./pact-provider-verifier",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/pact-foundation/pact-provider-verifier-npm"
+	},
+	"keywords": [
+		"pact",
+		"provider",
+		"verifier"
+	],
+	"author": "Pact Foundation <pact-foundation@googlegroups.com> (https://github.com/pact-foundation)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/pact-foundation/pact-provider-verifier-npm/issues"
+	},
+	"homepage": "https://github.com/pact-foundation/pact-provider-verifier-npm"
+}
