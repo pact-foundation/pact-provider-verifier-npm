@@ -2,8 +2,7 @@ language: ruby
 rvm: 2.1
 env:
   global:
-  - secure: Kc5j0fwV/6zHeENXidold1kRCHN7BKVY88Oe+0nNaqlJeaHfm+TUDTrhNghtYk2cEf1hM3SqgUozJvqGGWv+VkmMewv3UBWn0q21qLpyn8NgscnYAATrR4mEZMzq0ZWA63l/6t2l8v8wK7Y15PnbK990u5BLpLyTSqubfLXcx8k=
-  - secure: UVZQf9xGW3CDvUSpnraw7/MWGiYLFaMPoPNNBuHwrugsWihu0abFbUpRICLA3+iYO6bl1ngwy8WAtL7auAPCm9lR4zGYuIB0cTaJtQ95hHCTHK/9ix6LVcVxfvKwzWWY3Sg3s3xRQfNzrtbufzNowkooQrnHtgrlYbs4RM9lnTA=
+    - secure: cFS3G3GlKcfozujVKIjd2NEQ6+v0qD5cKrbBXBgcAKBWHst7rZDV0s5YEXpT3t3Xq58N8pRZAGbw9oVItxjBa60G4BiVAJ52e2WsXGrBJcZRJWM6C1SeH6iqFNfTavxUwNA2LnMkQAnkNNC4dEg0ftBsoLxv392rb20bOzuE48cHN9TPeFC2uMBWXUnlzhHAT6lZHKFdPVUWna0GuW0kiJnM5zCWd10uqJmwT/38A7ItyzjpCT3HB6yOrjpKWRbXn7EQtooAt4VVVeZMwyg478kUZj6SZBeuKc4n6dnyZo7pUZeYw68gcqT7Twf7FWnXYLVdd1fXCD2XA5CSD1+mPqQI7BnYrkFF0gbdH6shlUbFZ9fXC7+L++aEu+UBvKUazy99UGidfQA05GkNbDehFowNGBvM1cF3HBR9xz0Bju2qoz6GVzohh1VY36r9OzrYuyaQZjmFdyZqUy+PW3D3npjtbDxTE6TifSafJpXfbCt/KN7ecQxjUXUhGqHwYY4svjTtXWZ6chCNZ4Y01o67YY8TGR45lT3bM4eJO2i687uFDGvX2HoTbCSb3RNa7Nhy9xn7DDYkbPfQpQZxM+IGr0ym7vU8khfZHyuq6Cgeee+znYzPhEjY/HLNSg0P6X2jgxm7v6aKrI2Zfq5Ed46RMULl/usGsZma6gB6v7J7+Co=
 install:
 - npm install
 before_script:
@@ -24,14 +23,26 @@ deploy:
 - provider: script
   skip_cleanup: true
   script: cd build/pact-provider-verifier-darwin/ && npm publish . --access public
+  on:
+    branch: master
+    tags: true
 - provider: script
   skip_cleanup: true
   script: cd build/pact-provider-verifier-linux-ia32/ && npm publish . --access public
+  on:
+    branch: master
+    tags: true
 - provider: script
   skip_cleanup: true
   script: cd build/pact-provider-verifier-linux-x64/ && npm publish . --access public
+  on:
+    branch: master
+    tags: true
 - provider: script
   skip_cleanup: true
   script: cd build/pact-provider-verifier-win32/ && npm publish . --access public
+  on:
+    branch: master
+    tags: true
 after_failure:
 - find . -iname '*.log' -print0 | xargs -0 cat
