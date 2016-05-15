@@ -10,7 +10,8 @@ var file,
 	args = [],
 	opts = {
 		cwd: path.resolve(__dirname, 'bin'),
-		detached: true
+		detached: true,
+		stdio: 'inherit'
 	},
 	cmd = ['pact-provider-verifier' + (isWindows ? '.cmd' : '')].concat(process.argv.slice(2)).join(' ');
 
@@ -26,28 +27,19 @@ if (isWindows) {
 }
 
 var instance = cp.spawn(file, args, opts);
-console.info('Creating Pact with PID: ' + instance.pid);
-instance.stdout.setEncoding('utf8');
-instance.stdout.on('data', console.log);
-instance.stderr.setEncoding('utf8');
-instance.stderr.on('data', console.log);
-instance.on('error', console.error);
+console.info('Creating Pact process with PID: ' + instance.pid);
 
 // Kill process on node exit
 function exit() {
+	var exitCode = 0;
 	if (instance) {
-		console.info('Exiting Pact.');
 		instance.removeAllListeners();
-		if (isWindows) {
-			cp.execSync('taskkill /f /t /pid ' + instance.pid);
-		} else {
-			process.kill(-instance.pid, 'SIGKILL');
-		}
+		exitCode = instance.exitCode;
 		instance = undefined;
 	}
 	process.removeListener('exit', exit);
 	process.removeListener('SIGINT', exit);
-	process.exit();
+	process.exit(exitCode);
 }
 
 process.on('exit', exit);
