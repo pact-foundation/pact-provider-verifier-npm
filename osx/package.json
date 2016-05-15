@@ -1,6 +1,6 @@
 {
 	"name": "@pact-foundation/pact-provider-verifier-darwin",
-	"version": "0.8.4",
+	"version": "0.0.3",
 	"description": "Pact provider verifier",
 	"os": [
 		"darwin"
@@ -25,7 +25,7 @@
 		"provider",
 		"verifier"
 	],
-	"author": "Pact Foundation <pact-foundation@googlegroups.com> (https://github.com/pact-foundation)",
+	"author": "Matt Fellows <m@onegeek.com.au> (http://www.onegeek.com.au)",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/pact-foundation/pact-provider-verifier-npm/issues"
