@@ -29,12 +29,6 @@ before_deploy:
 deploy:
 - provider: script
   skip_cleanup: true
-  script: npm publish . --access public
-  on:
-    branch: master
-    tags: true
-- provider: script
-  skip_cleanup: true
   script: npm publish build/pact-provider-verifier-darwin/ --access public
   on:
     branch: master
@@ -54,6 +48,12 @@ deploy:
 - provider: script
   skip_cleanup: true
   script: npm publish build/pact-provider-verifier-win32/ --access public
+  on:
+    branch: master
+    tags: true
+- provider: script
+  skip_cleanup: true
+  script: npm publish . --access public
   on:
     branch: master
     tags: true
