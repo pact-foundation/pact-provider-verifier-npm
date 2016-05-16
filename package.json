@@ -1,6 +1,6 @@
 {
   "name": "@pact-foundation/pact-provider-verifier",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Pact provider verifier wrapper package. Installing this will install an executable appropriate for your platform.",
   "os" : [ "darwin", "linux" , "win32"],
   "cpu" : [ "x64", "ia32" ],
