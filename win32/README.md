@@ -4,12 +4,12 @@ This is a standalone executable packaged from the Ruby [pact-provider-verifier-g
 
 ## Usage
 
-    $ npm install pact-provider-verifier-win
+    $ npm install @pact-foundation/pact-provider-verifier-win
     $ node_modules/pact-provider-verifier-win/bin/pact-provider-verifier --port 1234
 
 # Known issues
 
-The packaged mock server always prints out the following message on startup. Have not yet traced the source.
+The packaged binary always prints out the following message on startup. Have not yet traced the source.
 
 ```
 No entry for terminal type "xterm-256color";

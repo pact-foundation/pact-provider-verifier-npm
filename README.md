@@ -11,13 +11,13 @@ This node module downloads the appropriate platform-specific and installs it alo
 ## Usage
 
 ```
-npm install pact-provider-verifier
+npm install @pact-foundation/pact-provider-verifier
 node_modules/.bin/pact-provider-verifier <options>
 ```
 
 # Known issues
 
-The packaged mock server always prints out the following message on startup. Have not yet traced the source.
+The packaged binary always prints out the following message on startup. Have not yet traced the source.
 
 ```
 No entry for terminal type "xterm-256color";
