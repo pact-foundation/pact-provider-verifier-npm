@@ -1,6 +1,6 @@
 {
 	"name": "@pact-foundation/pact-provider-verifier-linux-x64",
-	"version": "0.0.10",
+	"version": "0.0.12",
 	"description": "Pact provider verifier",
 	"os": [
 		"linux"
