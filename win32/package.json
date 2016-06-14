@@ -1,6 +1,6 @@
 {
 	"name": "@pact-foundation/pact-provider-verifier-win32",
-	"version": "0.0.12",
+	"version": "0.1.0",
 	"description": "Pact provider verifier",
 	"os": [
 		"win32"
@@ -12,7 +12,7 @@
 	"bin": {
 		"pact-provider-verifier": "./bin/pact-provider-verifier.bat"
 	},
-	"main": "./pact-provider-verifier",
+	"main": "./pact-provider-verifier.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},

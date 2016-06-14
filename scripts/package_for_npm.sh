@@ -17,8 +17,8 @@ else
 fi
 
 cp ../$SUFFIX/* $STANDALONE_PACKAGE_NAME
-chmod +x ../bin/pact-provider-verifier
-cp ../bin/pact-provider-verifier $STANDALONE_PACKAGE_NAME
+cp ../src/pact-provider-verifier.js $STANDALONE_PACKAGE_NAME
+cp ../README.md $STANDALONE_PACKAGE_NAME
 mv $STANDALONE_PACKAGE_NAME $NPM_PACKAGE_NAME
 cd $NPM_PACKAGE_NAME
 

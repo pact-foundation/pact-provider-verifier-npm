@@ -1,6 +1,6 @@
 {
 	"name": "@pact-foundation/pact-provider-verifier-linux-ia32",
-	"version": "0.0.12",
+	"version": "0.1.0",
 	"description": "Pact provider verifier",
 	"os": [
 		"linux"
@@ -11,7 +11,7 @@
 	"bin": {
 		"pact-provider-verifier": "./bin/pact-provider-verifier"
 	},
-	"main": "./pact-provider-verifier",
+	"main": "./pact-provider-verifier.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
