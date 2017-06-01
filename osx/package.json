@@ -1,6 +1,6 @@
 {
 	"name": "@pact-foundation/pact-provider-verifier-darwin",
-	"version": "1.2.0",
+	"version": "1.2.2",
 	"description": "Pact provider verifier",
 	"os": [
 		"darwin"
