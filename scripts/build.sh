@@ -2,7 +2,7 @@
 
 set -e
 
-export GEM_VERSION=1.1.0
+export GEM_VERSION=1.1.1
 export RELEASE_VERSION=1
 export PACKAGE_VERSION=${GEM_VERSION}-${RELEASE_VERSION}
 
