@@ -7,7 +7,7 @@ echo "Packaging $STANDALONE_PACKAGE_NAME.$EXTENSION for npm as $NPM_PACKAGE_NAME
 mkdir -p dist
 
 cd build
-cp pact-provider-verifier-${GEM_VERSION}/pkg/pact-provider-verifier-* .
+cp pact-provider-verifier-${PACKAGE_VERSION}/pkg/pact-provider-verifier-* .
 rm -rf $STANDALONE_PACKAGE_NAME
 
 if [ $EXTENSION = "zip" ]; then

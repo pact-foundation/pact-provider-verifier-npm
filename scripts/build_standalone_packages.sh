@@ -4,13 +4,13 @@ set -e
 
 mkdir -p build
 cd build
-if [ ! -d "pact-provider-verifier-${GEM_VERSION}" ]; then
-  wget https://github.com/pact-foundation/pact-provider-verifier/archive/v${GEM_VERSION}.zip -O temp.zip
+if [ ! -d "pact-provider-verifier-${PACKAGE_VERSION}" ]; then
+  wget https://github.com/pact-foundation/pact-provider-verifier/archive/v${PACKAGE_VERSION}.zip -O temp.zip
   unzip temp.zip
   rm temp.zip
 fi
 
-cd pact-provider-verifier-${GEM_VERSION}
+cd pact-provider-verifier-${PACKAGE_VERSION}
 
 
 bundle
