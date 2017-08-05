@@ -1,6 +1,6 @@
 {
 	"name": "@pact-foundation/pact-provider-verifier-win32",
-	"version": "1.4.0",
+	"version": "1.4.2",
 	"description": "Pact provider verifier",
 	"os": [
 		"win32"
