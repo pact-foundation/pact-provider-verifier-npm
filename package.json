@@ -1,6 +1,6 @@
 {
 	"name": "@pact-foundation/pact-provider-verifier",
-	"version": "1.4.2",
+	"version": "1.4.3",
 	"description": "Pact provider verifier wrapper package. Installing this will install an executable appropriate for your platform.",
 	"os": [ "darwin", "linux", "win32" ],
 	"cpu": [ "x64", "ia32" ],
@@ -36,14 +36,14 @@
 	"devDependencies": {
 		"chai": "^3.2.0",
 		"mocha": "^2.2.5",
-		"nodemon": "^1.4.2",
+		"nodemon": "^1.4.3",
 		"sinon": "^1.15.4"
 	},
 	"optionalDependencies": {
-		"@pact-foundation/pact-provider-verifier-linux-ia32": "1.4.2",
-		"@pact-foundation/pact-provider-verifier-linux-x64": "1.4.2",
-		"@pact-foundation/pact-provider-verifier-win32": "1.4.2",
-		"@pact-foundation/pact-provider-verifier-darwin": "1.4.2"
+		"@pact-foundation/pact-provider-verifier-linux-ia32": "1.4.3",
+		"@pact-foundation/pact-provider-verifier-linux-x64": "1.4.3",
+		"@pact-foundation/pact-provider-verifier-win32": "1.4.3",
+		"@pact-foundation/pact-provider-verifier-darwin": "1.4.3"
 	},
 	"main": "./index.js",
 	"scripts": {
