@@ -2,6 +2,8 @@
 
 # Pact Provider Verifier for NPM
 
+[![Build Status](https://travis-ci.org/pact-foundation/pact-provider-verifier-npm.svg?branch=master)](https://travis-ci.org/pact-foundation/pact-provider-verifier-npm)
+
 Installation wrapper for standalone platform-specific executables packaged from the Ruby [pact-provider-verifier](https://github.com/pact-foundation/pact-provider-verifier) gem.
 
 On install, this package selects and installs the correct standalone executable for your environment.
