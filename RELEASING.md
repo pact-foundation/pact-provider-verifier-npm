@@ -1,19 +1,9 @@
-# Contributing
+# Releasing
 
-## Building
+* Set the GEM_VERSION and RELEASE_VERSION for the version of the pact-provider-verifier standalone package you wish to use in `scripts/build.sh`
+* Update the version number in each `package.json` file to the next appropriate semantic version.
 
-* Set the GEM_VERSION and RELEASE_VERSION in `scripts/build.sh`
-* Update the version number in each `package.json` file to $GEM_VERSION-$RELEASE_VERSION
-
-```
-scripts/clean.sh
-scripts/build.sh
-```
-
-## Publishing
-
-    $ npm publish dist/pact-provider-verifier-win32.tar.gz
-    $ npm publish dist/pact-provider-verifier-linux-ia32.tar.gz
-    $ npm publish dist/pact-provider-verifier-darwin.tar.gz
-    $ npm publish dist/pact-provider-verifier-linux-x64.tar.gz
-    $ npm publish
+    export VERSION=$(cat package.json | jq -r .version)
+    git add *package.json scripts/build.sh && git status
+    git commit -m "Releasing version ${VERSION}" && git push
+    git tag -a v${VERSION} -m "Releasing version ${VERSION}" && git push origin v${VERSION}
