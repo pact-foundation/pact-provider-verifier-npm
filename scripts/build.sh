@@ -2,8 +2,8 @@
 
 set -e
 
-export GEM_VERSION=1.1.3
-export RELEASE_VERSION=1
+export GEM_VERSION=1.1.4
+export RELEASE_VERSION=2
 export PACKAGE_VERSION=${GEM_VERSION}-${RELEASE_VERSION}
 
 scripts/build_standalone_packages.sh
